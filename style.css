@@ -1,3 +1,97 @@
-h1 {
-    color: pink;
+
+body{ 
+    background-image: url(HOME.png);
+    margin:16px;
+}
+
+header h1{
+    color:white;
+    border-radius: 6px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+header h2{
+    color: beige;
+        font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+.navigate{
+    text-align: center;
+    
+}
+
+nav a{
+    color:beige;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+
+}
+#homeNav{
+    background-color: beige;
+}
+
+
+main {
+    color: white;
+    background-image: url(homeCheckered.png);
+    background-repeat: repeat;
+    min-height: 100vh;
+    padding: 50px;
+    line-height: 1.6;
+
+}
+
+#categories{
+    color:#fff5df;
+    font-size: 50px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: maroon;
+    border: 10px black;
+    border-radius: 10px;
+
+}
+
+article {
+    background-color: beige;
+    padding: 20px;
+    border-radius: 6px;
+}
+article h2{
+    color:black;
+}
+article p{
+    color:black;
+
+}
+
+.recipe{
+    display: flex;
+    align-items: center;
+    gap:30px;
+       border:5px #611a1a;
+}
+
+.recipe p{
+    flex:1;
+}
+
+.recipe img{
+    width: 300px;
+    border-radius: 10px;
+    padding:5px;
+}
+
+.ingredients {
+opacity: 0;
+max-height:0;
+overflow: hidden;
+transition: 0.5s ease;
+}
+
+.recipeCard:hover .ingredients{
+   opacity: 1;
+   max-height: 500px;
+   color: black
 }
