@@ -1,29 +1,90 @@
-
 body{ 
-    background-image: url(pictures/kapampanganBG.jpg);
+    background-image: url(pictures/homeBG.png);
     background-size: cover;
-    background-position: center;
+    background-position: center 30%;
     background-repeat: no-repeat;
-    margin:0;
+    min-height: 100vh;
+    margin: 0;
+}
+
+* {
+    box-sizing: border-box;
 }
 
 @font-face {
     font-family: 'stazin' ;
     src: url('fonts/Stazin-Medium.ttf') format('truetype');
 }
+.stazinfont{
+font-family: 'stazin', sans-serif;
+}
+
+@font-face {
+    font-family: 'larkenReg';
+    src: url('fonts/Larken\ Regular.ttf') format('truetype');
+}
+
+.larkenRegFont{
+    font-family: 'larkenReg', sans-serif;
+}
+
+@font-face {
+    font-family: 'larkenMed';
+    src: url(fonts/Larken\ Medium.ttf) format('truetype');
+}
+
+.larkenMedFont{
+    font-family: 'larkenMed', sans-serif;
+}
+
+@font-face {
+    font-family: 'larkenBold';
+    src: url(fonts/Larken\ Bold.ttf) format('truetype');
+}
+
+.larkenBoldFont{
+    font-family: 'larkenBold';
+}
+@font-face {
+    font-family: 'larkenBlack';
+    src: url(fonts/Larken\ Black.ttf) format('truetype');
+}
+
+.larkenBlackFont{
+    font-family: 'larkenBlack';
+}
+
+@font-face {
+    font-family: 'vidaloka';
+    src: url(fonts/Vidaloka-Regular.ttf) format('truetype');
+}
+
+.vidalokaFont{
+    font-family: 'vidaloka';
+}
+
+header img, .dishImg{
+    max-width: 100%;
+    height: auto;
+}
 header{
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
 }
 header img{
-    width: 400px;
+    width: 150px;
     display: block;
     margin: 0 auto;
+    filter: drop-shadow(2px 3px 6px rgba(0, 0, 0.5));
 
 }
-header h1{
+.titleLogo{
     color:#677030;
     font-family: 'stazin', sans-serif;
-    font-size: 90px;
+    font-size: clamp(50px, 10vw, 150px);
     text-align: center;
     -webkit-text-stroke: 7px #f9f1de;
     paint-order: stroke fill;
@@ -32,95 +93,106 @@ header h1{
         -5px -5px #fff8df,
         5px -5px #fff8df,
         -5px 5px #fff8df;
-    margin:-95px 0 -50px 0;
+    filter: drop-shadow(2px 3px 6px rgba(0, 0, 0.5));
+    margin:0;
     padding: 0;
     width: 100%;
-    height: 100%;
     
 }
-header h2{
+.catchPhrase{
     color: beige;
-        font-family: Arial, Helvetica, sans-serif;
+    font-family: 'vidaloka';
+    font-size: clamp(18px, 4vw, 30px);
     text-align: center;
+       filter: drop-shadow(2px 4px 6px rgba(0, 0, 0.5));
+           -webkit-text-stroke: 2px #677030;
+    paint-order: stroke fill;
+    margin-top: -15px;
+    
 }
 
 .navigate{
-    text-align: center;
-    margin-bottom: 10px;
-    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
     background-color: #677030;
-    padding: 10px;
-    
+    padding: 15px 40px;
 }
 
 nav a{
     color:beige;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'larkenBlack';
+    font-size: 25px;
     text-align: center;
     text-decoration: none;
-    margin: 0 100px;
-
 }
 
 main {
-    color: white;
+background-color: #f9f1de99;
+padding: 30px;
+margin: 0;
+
+}
+
+.recipeGrid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap:20px;
+    align-items: start;
+
+}
+.recipeCard{
     background-color: #f9f1de;
-    padding:50px;
-    min-height: 100vh;
-    margin: 100px 50px;
-    line-height: 1.6;
-    border: 2px solid black;
-}
-
-#categories{
-    color:#fff5df;
-    font-size: 50px;
-    text-align: center;
-    font-family:Georgia, 'Times New Roman', Times, serif;
-    background-color: maroon;
-    border: 10px black;
+    padding: 20px;
     border-radius: 10px;
-
-}
-
-.dishName{
-    color:black;
-}
-article p{
-    color:black;
-
 }
 
 .recipe{
-    display: flex;
-    align-items: center;
-    gap:30px;
-       border:5px #611a1a;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.dishName{
+    font-family: 'larkenBlack';
+    color:#4e571b;
+    font-size: clamp(30px, 10vw, 50px);
 }
 
 .recipe p{
-    font-family: ;
-    flex:1;
+font-family: 'larkenReg';
+color: #677030;
+font-size: clamp(5px, 20vw, 30px);
+
 }
 
-
-.ingredients {
-opacity: 0;
-max-height:0;
-overflow: hidden;
-transition: 0.5s ease;
+.dishImg{
+    aspect-ratio: 789 x 785;
+    align-self: start;
+}
+.dishImg img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
-.recipeCard{
-    margin-bottom: 20px;
-    border: 2px solid black;
-    background-color: beige;
-    padding: 20px;
-    border-radius: 6px;
-    font-family:Georgia, 'Times New Roman', Times, serif;
-}
-.recipeCard:hover .ingredients{
-   opacity: 1;
-   max-height: 500px;
-   color: black;
+@media (max-width:1300px) {
+    .navigate{
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 100px;
+    }
+
+    nav a {
+        font-size: 18px;
+    }
+
+    .recipe {
+        grid-template-columns: 1fr;  
+    }
+
+    .recipeGrid{
+        grid-template-columns: 1fr;
+    }
 }
