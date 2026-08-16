@@ -1,0 +1,307 @@
+body{ 
+    background-image: url(pictures/homeBG.png);
+    background-size: cover;
+    background-position: center 30%;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    margin: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'stazin' ;
+    src: url('fonts/Stazin-Medium.ttf') format('truetype');
+}
+.stazinfont{
+font-family: 'stazin', sans-serif;
+}
+
+@font-face {
+    font-family: 'larkenReg';
+    src: url('fonts/Larken\ Regular.ttf') format('truetype');
+}
+
+.larkenRegFont{
+    font-family: 'larkenReg', sans-serif;
+}
+
+@font-face {
+    font-family: 'larkenMed';
+    src: url(fonts/Larken\ Medium.ttf) format('truetype');
+}
+
+.larkenMedFont{
+    font-family: 'larkenMed', sans-serif;
+}
+
+@font-face {
+    font-family: 'larkenBold';
+    src: url(fonts/Larken\ Bold.ttf) format('truetype');
+}
+
+.larkenBoldFont{
+    font-family: 'larkenBold';
+}
+@font-face {
+    font-family: 'larkenBlack';
+    src: url(fonts/Larken\ Black.ttf) format('truetype');
+}
+
+.larkenBlackFont{
+    font-family: 'larkenBlack';
+}
+
+@font-face {
+    font-family: 'vidaloka';
+    src: url(fonts/Vidaloka-Regular.ttf) format('truetype');
+}
+
+.vidalokaFont{
+    font-family: 'vidaloka';
+}
+
+header img, .dishImg{
+    max-width: 100%;
+    height: auto;
+}
+header{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+}
+header img{
+    width: 150px;
+    display: block;
+    margin: 30px auto auto auto;
+    filter: drop-shadow(2px 3px 6px rgba(0, 0, 0.5));
+
+}
+.titleLogo{
+    color:#677030;
+    font-family: 'stazin', sans-serif;
+    font-size: clamp(50px, 20vw, 100px);
+    text-align: center;
+    -webkit-text-stroke: 7px #f9f1de;
+    paint-order: stroke fill;
+        text-shadow:
+        5px 5px #fff8df,
+        -5px -5px #fff8df,
+        5px -5px #fff8df,
+        -5px 5px #fff8df;
+    filter: drop-shadow(2px 3px 6px rgba(0, 0, 0.5));
+    margin:0;
+    padding: 0;
+    width: 100%;
+ 
+    
+}
+.catchPhrase{
+    color: beige;
+    font-family: 'vidaloka';
+    font-size: clamp(18px, 4vw, 30px);
+    text-align: center;
+       filter: drop-shadow(2px 4px 6px rgba(0, 0, 0.5));
+           -webkit-text-stroke: 2px #677030;
+    paint-order: stroke fill;
+    margin-top: -15px;
+    
+}
+
+.navigate{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    background-color: #677030;
+    padding: 15px 40px;
+}
+
+nav a{
+    color:beige;
+    font-family: 'larkenBlack';
+    font-size: clamp(20px, 4vh, 24px);
+    text-align: center;
+    text-decoration: none;
+}
+
+main {
+background-color: #f9f1de99;
+padding: 30px;
+margin: 0;
+
+}
+
+.category{
+    color:#e4a120;
+    font-family: 'stazin', sans-serif;
+    font-size: clamp(24px, 5vw, 46px);
+    text-align: center;
+    -webkit-text-stroke: 3px #f9f1de;
+    paint-order: stroke fill;
+        text-shadow:
+        2px 2px #fff8df,
+        -2px -2px #fff8df,
+        2px -2px #fff8df,
+        -2px 2px #fff8df;
+    filter: drop-shadow(2px 3px 6px rgba(0, 0, 0.5));
+    background-color: #677030;
+    margin: 0;
+    padding: 5px;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.recipeGrid {
+    column-count: 2;
+    column-gap: 20px;
+}
+
+.recipeCard {
+    background-color: #f9f1de;
+    padding: 30px;
+    border-radius: 10px;
+    filter: drop-shadow(2px 4px 6px rgba(0, 0, 0.5));
+    break-inside: avoid;
+    margin-bottom: 20px;
+    display: inline-block;
+    width: 100%;
+}
+.recipe{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px 5px;
+}
+
+.dishName{
+    font-family: 'larkenBlack';
+    color:#4e571b;
+    font-size: clamp(24px, 5vw, 34px);
+    margin: 10px 0 0 0;
+}
+
+.dishDescription{
+font-family: 'larkenReg';
+color: #677030;
+font-size: clamp(14px, 2vw, 17px);
+margin: 20px 0 0 0;
+}
+
+.dishImg{
+    display: flex;
+    align-self: start;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+
+}
+.dishImg img{
+    width: 100%;
+    object-fit: contain;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+    align-self: center;
+}
+
+.ingredients{
+    color: #4e571b;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: 0.5s ease;
+}
+
+.ingredientsToggle{
+    display: none;
+}
+
+.ingredientsToggle:checked ~ .ingredients{
+    max-height: 1500px;
+    opacity: 1;
+}
+
+.ingredientsBtn{   
+    display: block; 
+    color: #fff8ea;
+    font-size: clamp(16px, 3vh, 20px);
+    font-family: 'larkenBold';
+    background-color: #e8bc5f;
+    /* filter: drop-shadow(2px 4px 6px rgba(0, 0, 0.5)); */
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 10px 40px;
+    border-radius: 10px;
+    margin: clamp(5px, 5vw, 30px) 0 0 0;
+    transition: background-color 0.3 ease, transform 0.15s ease, boxshadow 0.3s ease;
+    cursor: pointer;
+}
+
+.ingredientsBtn:hover{
+    background-color: #d4a94a;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.ingredientsBtn:focus-within{
+    background-color: #d4a94a;
+}
+
+.ingredientsBtn:active{
+    background-color: #c29a3f;
+    transform: translateY(0px);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+}
+
+.ingredients ul {
+    margin: 0;
+    padding-left: 20px;
+    font-family: 'larkenReg';
+    font-size: 16px;
+}
+
+.ingredients h3 {
+    font-family: 'larkenBold';
+    font-size: 20px;
+}
+
+.ingredients h4{
+    font-family: 'larkenBold';
+    font-size: 18px;
+}
+@media (max-width:1500px) {
+    .navigate{
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 100px;
+    }
+
+    nav a {
+        font-size: 18px;
+    }
+
+    .recipe {
+        grid-template-columns: 1fr;  
+    }
+
+    .recipeGrid{
+        /* grid-template-columns: 1fr; */
+        column-count: 1;
+    }
+
+    .dishImg img{
+        width: 70%;
+        height: 70%;
+    }
+
+    .dishDescription{
+        padding: 10px;
+    }
+
+    
+}
