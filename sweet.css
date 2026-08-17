@@ -278,6 +278,97 @@ margin: 20px 0 0 0;
     font-family: 'larkenBold';
     font-size: 18px;
 }
+
+footer{
+    background-color: #5e3766;
+    padding: 30px 50px 15px;
+    color: #f9f1de;
+}
+
+.footerContent{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+.footerBrand{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.footerBrand img{
+    filter: drop-shadow(2px 3px 6px rgba(0, 0, 0.5));
+}
+footer img{
+    width: 70px;
+    height: auto;
+}
+
+.footerLogo{
+    color: #653070;
+    font-family: 'stazin', sans-serif;
+    font-size: clamp(30px, 10vw, 40px);
+    -webkit-text-stroke: 4px #f9f1de;
+    paint-order: stroke fill;
+        text-shadow:
+        2px 2px #fff8df,
+        -2px -2px #fff8df,
+        2px -2px #fff8df,
+        -2px 2px #fff8df;
+    filter: drop-shadow(2px 3px 6px rgba(0, 0, 0.5));
+    margin:0;
+}
+
+.footerNav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:100px;
+    color: #f9f1de;
+    font-family: 'larkenBold';
+    font-size: 18px;
+    text-decoration: none;
+    transition: color 0.3 ease, transform 0.2 ease;
+
+}
+
+.footerNav a:hover {
+    color: #fdb832;
+    transform:translateY(-2px)
+}
+
+.footerSocials{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.footerSocials a{
+    display: flex;
+    transition: transform 0.2s ease;
+}
+
+.footerSocials img {
+    width: 35px;
+    height: 35px;
+    object-fit: contain;
+}
+
+.footerSocials a:hover {
+    transform: translateY(-3px);
+}
+
+.footerCopyright{
+    text-align: center;
+    font-family: 'larkenReg';
+    font-size: 14px;
+    margin: 25px 0 0;
+    padding-top: 15px;
+    border-top: 1px solid #f9f1de66;
+}
 @media (max-width:1500px) {
     .navigate{
         flex-wrap: wrap;
