@@ -130,6 +130,11 @@ nav a{
     text-decoration: none;
 }
 
+nav a:hover {
+    color: #fdb832;
+    transform:translateY(-2px)
+}
+
 main {
 background-color: #f9f1de99;
 padding: 30px;

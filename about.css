@@ -115,15 +115,26 @@ nav a{
     padding: 20px;
 }
 
+nav a:hover{
+    color: #c8427f;
+    transform:translateY(-2px)
+}
+
 .navigateBars {
       padding: 0px;
 }
+
 
 .socials{
     display: flex;
     align-items: center;
     gap: 15px;
 }
+
+.socials a:hover {
+    transform: translateY(-3px);
+}
+
 nav img{
     width: clamp(40px, 1vh, 60px);
 }
@@ -259,7 +270,7 @@ footer img{
 }
 
 .footerNav a:hover {
-    color: #fdb832;
+    color: #c8427f;
     transform:translateY(-2px)
 }
 
